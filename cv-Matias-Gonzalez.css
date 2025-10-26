@@ -1,0 +1,182 @@
+/* Variables de Color */
+:root {
+    --color-principal: #312f2f; 
+    --color-acento: #075cef; 
+    --color-fondo: #fefefe;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+    line-height: 1.4;
+}
+
+.cv-documento {
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabecera */
+.header-moderno {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 15px;
+}
+
+.nombre {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.contacto-info {
+    font-size: 0.8em;
+    color: #555;
+    margin: 5px 0 0 0;
+}
+
+/* Títulos de Sección con Forma Geométrica */
+.titulo-moderno {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-principal);
+    padding-left: 20px; 
+    margin: 25px 0 10px 0; 
+    position: relative; 
+}
+
+/* Crear la forma geométrica (el "swoosh" curvo) */
+.titulo-moderno::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); 
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-acento);
+        border-radius: 0 50% 0 50%;
+    transform: translateY(-50%) skewX(-30deg) scaleX(0.7);
+    left: -5px; 
+    height: 25px; 
+    width: 10px;
+    background-color: var(--color-acento);
+    
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    border-radius: 0 0 20px 0;
+    left: -15px;
+}
+
+/* Contenedor Flex para datos personales y foto */
+.datos-personales-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.datos-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr; 
+    gap: 0px 10px;
+    font-size: 0.95em;
+    padding-top: 5px; 
+}
+.datos-grid > div:nth-child(odd) {
+    font-weight: normal; 
+    color: #333; 
+}
+
+/* Objetivo */
+.seccion-objetivo {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 20px;
+}
+
+.seccion-objetivo p {
+    font-style: normal; 
+    font-size: 0.95em;
+    color: #333;
+}
+
+/* Experiencia y Formación - Diseño de dos columnas */
+.experiencia-item {
+    display: flex;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.columna-izquierda {
+    flex: 0 0 140px; 
+    font-size: 0.9em;
+    color: #555;
+    padding-right: 20px;
+}
+
+.columna-derecha {
+    flex-grow: 1;
+}
+
+.empresa-nombre {
+    margin: 0;
+    font-size: 0.95em; 
+    font-weight: normal;
+    color: #333;
+}
+
+.puesto-nombre {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+    color: var(--color-acento); 
+    font-weight: bold; 
+}
+
+.columna-derecha ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* Conocimientos Adicionales y Habilidades Personales */
+.datos-adicionales-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr; 
+    gap: 5px 10px;
+    font-size: 0.95em;
+    padding-bottom: 10px;
+}
+
+/* Asegura que las etiquetas de Conocimientos Adicionales tampoco sean negrita */
+.datos-adicionales-grid > div:nth-child(odd) {
+    font-weight: normal; 
+    color: #333;
+}
+
+.datos-adicionales-grid p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Estilo para la lista de Habilidades Personales */
+.lista-habilidades-personales {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.lista-habilidades-personales li {
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
